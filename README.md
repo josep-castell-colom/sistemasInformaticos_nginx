@@ -49,7 +49,8 @@ En este punto es interesante observar cómo funciona Nginx. Para ello observemos
 </div>
 
 Aquí vemos dos directorios interesantes: _sites-available_ y _sites-enabled_.  
-En el primero se encuentra un archivo de configuración del servidor llamado _default_ y en el segundo directorio hay un archivo con el mismo nombre que apunta al anterior (`/etc/nginx/sites-available/default`).
+En el primero guardaremos los sitios disponibles y, en el segundo directorio, los sitios activados.  
+En el primero se encuentra un archivo de configuración del servidor llamado _default_ y en el segundo directorio hay un enlace simbólico que apunta al anterior (`/etc/nginx/sites-available/default`).
 
 <div style="width:100%;text-align:center">
 <img src="imgs/captura4.png" style="width:600px;border-radius:6px;"/>
@@ -90,7 +91,7 @@ El siguiente paso es dirigirnos al directorio `/etc/nginx/sites-available` y cop
 <img src="imgs/captura9.png" style="width:600px;border-radius:6px;"/>
 </div>
 
-A continuación debemos editar cada uno de los ficheros para que respondan a su dirección. Para ello modificaremos el contenido del archivo de configuración cambiando los parámetros mencionados anteriormente:
+A continuación debemos editar cada uno de los ficheros para que se correspondan con su dirección. Para ello modificaremos el contenido del archivo de configuración cambiando los parámetros mencionados anteriormente:
 
 - **listen**: dejaremos el mismo puerto (80) aunque eliminaremos la opción _defalut_server_ ya que sólo podemos tener un servidor por defecto.
 - **root**: actualizaremos el directorio raíz para cada uno de los dos juegos con la ruta de la carpeta donde los hemos guardado.
